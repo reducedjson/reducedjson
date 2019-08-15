@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="resources/jed/jsoneditor.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="resources/jquery-ui-1.12.1/jquery-ui.css">
+<link rel="stylesheet" href="resources/css/style.css">
+
+<script type="text/javascript" language="javascript" src="jsoncommand/jsoncommand.nocache.js"></script>
+<script src="resources/js/jquery.min.js"></script>
+<script src="resources/jed/jsoneditor.js"></script>
+<script src="resources/jed/filereader.js"></script>
+<script src="resources/jed/FileSaver.min.js"></script>
+<script src="resources/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchorr,.fa-coffee {font-size:200px}
+
+    #jsoneditor {
+        border-radius: 25px;
+        border: 2px solid #f44336;
+        padding: 20px;
+        width: 100%;
+        height: 500px;
+    }
+
+
+    .textField {
+        width: 100%;
+        border-radius: 15px ;
+        border: 4px solid #f44336;
+        padding: 10px;
+
+    }
+
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <!--<a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>-->
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>-->
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>-->
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>-->
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>-->
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <!--<a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>-->
+
+    </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">
+        <img src="resources/img/reducedjson_logo1.png" style="border-radius: 50%;">
+    </h1>
+    <p class="w3-xlarge">v1.0</p>
+    <p class="w3-xlarge">A revolutionary JavaScript utility to parse the JSON</p>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-twothird">
+            <h1>What is ReducedJSON?</h1>
+            <h5 class="w3-padding-32">ReducedJSON is JavaScript library to take all the responsibility to parse the JSON data structure at run time dynamically, so you do not need to write complex parsing code for any length and complexity level of JSON data. Make your development pace 75% faster to concentrate on business feature development rather than consuming much of the time and efforts in writing parsing code to parse the JSON data</h5>
+
+            <p class="w3-text-grey">
+                ReducedJSON library can be used with any JavaScript framework. It is quite efficient and effective while playing with JSON data to parse and find target data. There is need of very basic level understanding of JavaScript to use ReducedJSON library. Soon, ReducedJSON will help jQuery framework users to come back into the race with AngularJS and React JavaScript frameworks users.
+            </p>
+        </div>
+
+        <div class="w3-third w3-center">
+
+        </div>
+    </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-third w3-center">
+            <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+        </div>
+
+        <div class="w3-twothird">
+            <h1>How to use it?</h1>
+            <h5 class="w3-padding-32">It is very handy to use ReducedJSON in quickest and shortest matter of time like in minutes. One needs to have good knowledge of Array and Map data structure while understanding JSON data</h5>
+            <p class="w3-text-grey">There are two important parameters will always be used in ReducedJSON library while calling it's <b>process(json,command)</b> function.</p>
+            <p class="w3-text-grey">In process(<b>json</b>,command) function, <b>json</b> is a string of json data and nothing more than that. where as <b>command</b> is what all about to understand how ReducedJSON works</p>
+        </div>
+    </div>
+</div>
+<!--            -------------Demo----------                  -->
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Demo</h1>
+   <table>
+       <tr>
+           <td>Input</td>
+           <td><textarea  id="json_area"class="textField" rows="30" cols="500">
+                       {"_meta":{"success":true,"code":200,"message":"OK. Everything worked as expected.","totalCount":4014,"pageCount":201,"currentPage":1,"perPage":20,"rateLimit":{"limit":30,"remaining":29,"reset":2}},"result":[{"id":"1","user_id":"1134","title":"Nisi tempore a quae et. Eaque et nihil tempora sint maxime. Cum libero voluptas rem ex.","body":"In quisquam sint blanditiis expedita. Mollitia veniam fugit laboriosam molestias assumenda est unde. Est sint dolores in. Eveniet dolore consectetur sed tempore dolorem necessitatibus animi.\n\nEius esse architecto perspiciatis reiciendis. Voluptas voluptatem non ut rem et hic. Sed doloribus non magni deleniti blanditiis nihil fugit blanditiis.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/1"},"edit":{"href":"https://gorest.co.in/public-api/posts/1"}}},{"id":"2","user_id":"1672","title":"Eveniet numquam ut recusandae est. Perferendis sunt tenetur provident saepe sit quasi.","body":"Qui non quae illo dolor aut eius. Impedit sapiente aliquam vel id. Aliquam alias aliquam ut nemo dolorum id. Explicabo recusandae et facilis.\n\nVelit rem quis minima quis dolor sunt. Aut quae possimus adipisci quasi. Soluta optio dolores quo sunt natus omnis. Nesciunt unde accusantium voluptates architecto quasi est.\n\nOmnis placeat eum voluptatem beatae nesciunt maiores. Possimus quis occaecati suscipit. Corrupti molestiae dolore eius officiis. Quod dolores est recusandae ea ullam ratione numquam tempora.\n\nVel quo eius totam. Eius corporis magnam magnam quo et reprehenderit. Ipsam dolores saepe veritatis voluptas. Sit saepe dolores et et sit.\n\nEt consequatur veritatis enim. Aliquid saepe dolores impedit est non. Natus sed commodi sint. Repellat cupiditate quos non dolores.\n\nAutem impedit quibusdam aut repudiandae rerum qui. Voluptatem beatae est at atque et cupiditate.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/2"},"edit":{"href":"https://gorest.co.in/public-api/posts/2"}}},{"id":"3","user_id":"1058","title":"Debitis harum possimus aliquam est. Suscipit quo ex quo quo.","body":"Ut qui odit blanditiis voluptatem officia quod. Quidem animi ipsam repellat aut libero dolores perspiciatis. Quos eligendi et velit culpa ab iusto.\n\nTempore unde error sit qui sint ex dolor. Enim asperiores molestiae vel maiores. Provident rerum animi doloremque rerum sunt. Necessitatibus vero omnis qui porro accusamus.\n\nEaque ut tempora cumque sit. Fugiat velit vitae et. Et aperiam ex sed blanditiis unde odit non. Aliquam aspernatur ea tempora alias fugiat.\n\nAut ex vero et soluta libero animi. Asperiores consequatur repudiandae est. Cumque quae qui accusantium vel consectetur.\n\nUt illo harum illum. Eum autem velit quod.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/3"},"edit":{"href":"https://gorest.co.in/public-api/posts/3"}}},{"id":"4","user_id":"1003","title":"Maxime aperiam velit ut quo sapiente nostrum quisquam quia. Esse aliquid ipsum officia impedit ut.","body":"Libero quo aut voluptates ea. Libero tempore iure qui dolore commodi illum quo. Quos qui modi consequatur ipsa eligendi.\n\nMinus odit nesciunt fugiat sunt. Aliquid et voluptate praesentium perferendis. Rem voluptatibus sed atque similique sint sapiente. Voluptas pariatur quisquam consequatur ex et et enim.\n\nSit ipsam quaerat accusamus incidunt enim. Quo animi ducimus et ut id et eveniet. Officia eaque voluptatum nisi quos et.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/4"},"edit":{"href":"https://gorest.co.in/public-api/posts/4"}}},{"id":"5","user_id":"884","title":"Est mollitia blanditiis modi odio dicta fugiat. Fugiat minus eius nulla ut necessitatibus.","body":"Ratione perferendis sunt dicta magnam neque. Doloremque eius magni amet beatae dolor labore. Accusamus dolor quidem saepe laboriosam repellat quod nesciunt commodi. Voluptatibus voluptatem magni et voluptates et voluptatem.\n\nVero est et omnis odio et praesentium. Et vero et ut. Expedita maiores voluptatum exercitationem ut. Ut in qui illum modi assumenda qui possimus.\n\nQuae qui aut doloribus autem. Voluptates rem tempora qui eius praesentium sunt tempore. Nisi iusto nesciunt eaque ullam facere. Sint voluptas qui magni et quisquam odit aspernatur.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/5"},"edit":{"href":"https://gorest.co.in/public-api/posts/5"}}},{"id":"6","user_id":"1221","title":"Sint a iusto rerum qui. Officia est qui in. Aut laborum non error aut consequuntur quia.","body":"Voluptas rerum eaque blanditiis et fuga consequatur ratione. Aut ad rerum nihil maiores.\n\nDelectus ut facere ut nobis. Quo omnis iste dolor ipsa. Veritatis perferendis ea aspernatur voluptate molestiae dolor beatae. Blanditiis autem id quibusdam nihil beatae.\n\nSit hic quo neque sapiente modi. Ut ullam beatae excepturi officia animi cupiditate rerum. Voluptas dolorem velit assumenda aperiam non velit.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/6"},"edit":{"href":"https://gorest.co.in/public-api/posts/6"}}},{"id":"7","user_id":"303","title":"At et ad in voluptas architecto facere ut. Voluptas ab illo alias et saepe ipsam nulla porro.","body":"Libero natus illo enim. Fugiat nesciunt rerum illo recusandae tempore qui. Nostrum ratione voluptatum dolor sit excepturi.\n\nReprehenderit non veniam expedita. Voluptatum est praesentium quia voluptas sunt. Voluptate culpa nemo voluptas inventore nemo voluptas maiores.\n\nOfficiis a eos et qui ut quibusdam. Qui sunt sapiente mollitia quia non. Aperiam omnis error ipsum dolor. Voluptatum enim voluptatum ex est placeat odit.\n\nDolores nam est dolores similique. Nesciunt quam tenetur aut cum id accusamus.\n\nImpedit modi minima expedita quia et tempore nostrum voluptatem. Veritatis sit voluptas sit non.\n\nVoluptatem excepturi nisi iste. Non quia quasi voluptatem soluta reprehenderit. Voluptatum corporis quisquam nobis non ut ex.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/7"},"edit":{"href":"https://gorest.co.in/public-api/posts/7"}}},{"id":"8","user_id":"602","title":"Soluta perspiciatis totam consequatur ea sed qui. Ipsum et ab et enim sequi et.","body":"Ipsa consequatur non minus est explicabo. Nihil et aperiam est autem eligendi eos. Non rem nihil ducimus tenetur esse explicabo nesciunt. Similique sint molestiae illo sint nisi deleniti dolore aut.\n\nExpedita laboriosam unde possimus aliquid. Fugiat enim ducimus corrupti modi veritatis omnis. Occaecati vel nobis quo iusto aut delectus ut. Id expedita voluptatem magni ex possimus cupiditate.\n\nEx totam quia ad. Veritatis sint beatae beatae eos voluptatem aut et quae. Suscipit nisi aut quia ut voluptatibus eos voluptates.\n\nIncidunt tempora aut deleniti molestiae quod delectus praesentium. Ea minus natus deleniti consequuntur fugit laboriosam. Repellendus labore occaecati architecto quas et quod laudantium. Eos et nulla quibusdam sunt tempore doloremque molestiae illo.\n\nSit consequuntur rem ratione pariatur qui. Eum quasi deserunt sequi optio reiciendis.\n\nVoluptas beatae quae quidem possimus similique non eaque rem. Nobis nostrum et perferendis porro reiciendis sequi. Quisquam minima et nulla.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/8"},"edit":{"href":"https://gorest.co.in/public-api/posts/8"}}},{"id":"9","user_id":"985","title":"Quisquam commodi sit est et. Illum sed nobis qui sit veniam veritatis. Neque quae quidem id.","body":"Voluptatibus doloremque amet quod nesciunt est debitis. Quia sint at cumque tempore omnis vel. Voluptatibus ea aperiam quia voluptates explicabo a sit. Nihil velit quas ipsa.\n\nMaxime unde quis ut alias illo facere. Cupiditate consequuntur facere est voluptas sit excepturi. Mollitia aspernatur quidem aut quos. Facilis est quia nihil repellat aperiam suscipit possimus.\n\nAdipisci quia et aut sed. Neque id exercitationem error omnis enim. Excepturi ipsa quos illum modi aut temporibus. Quo reiciendis voluptates occaecati eius.\n\nNon reprehenderit est vel quia perferendis. Dolores optio consectetur magni nihil. Eveniet perspiciatis recusandae vitae laudantium autem molestiae. Laborum ratione consectetur occaecati iste mollitia sit sit.\n\nConsectetur possimus est voluptates. Ad aspernatur dicta tenetur doloremque odit sit sed nulla. Accusantium eaque est et animi. Doloremque libero tempora enim animi ullam eius voluptas.\n\nEa harum ex minus pariatur et architecto commodi. Quaerat voluptas et officiis a et dolore omnis.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/9"},"edit":{"href":"https://gorest.co.in/public-api/posts/9"}}},{"id":"10","user_id":"544","title":"Explicabo ad rerum non quo et. Aut enim quidem labore velit minima expedita aut perferendis.","body":"Inventore dolor velit maiores maxime fugiat velit. Minus repellat exercitationem a delectus corrupti accusantium. Sit doloribus velit saepe recusandae eum sapiente. Eveniet ipsum assumenda dignissimos non distinctio pariatur. Unde nobis provident animi error ullam ut similique.\n\nId est aut maiores. Impedit et corporis accusantium cupiditate. Rem sed non velit mollitia voluptatem omnis.\n\nEt est iste et unde. Numquam reprehenderit et molestiae laudantium repellat.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/10"},"edit":{"href":"https://gorest.co.in/public-api/posts/10"}}},{"id":"11","user_id":"1590","title":"Aliquam ut corporis omnis voluptatem amet dignissimos. Quis architecto tenetur quia possimus nobis.","body":"Est ut est vero qui. Laboriosam minus aperiam tempora fugiat tempora et. Enim aut voluptas suscipit ad. Fuga est possimus quaerat error quis.\n\nNemo et incidunt quia. Aut voluptate et culpa optio deserunt aut. Vel maxime quisquam nulla pariatur. Dignissimos illo esse numquam voluptatem omnis quam.\n\nSimilique fugiat et earum quo. Quis ut officiis reprehenderit modi laboriosam et odit. Porro reiciendis ipsum veniam iure maiores exercitationem. Quis nulla ipsa iusto consequatur ex autem.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/11"},"edit":{"href":"https://gorest.co.in/public-api/posts/11"}}},{"id":"12","user_id":"496","title":"Totam adipisci ut exercitationem provident. Autem provident suscipit magnam ut.","body":"Nihil provident quas non adipisci. Amet itaque quia error labore. Labore voluptatibus in blanditiis dolorum soluta saepe. Non minus eius deleniti sapiente officia officia rerum aliquam. Voluptas odit accusamus doloremque omnis autem.\n\nDebitis dolores facilis similique nam. Hic blanditiis natus voluptatum natus. Rerum consectetur error nihil dolorem repudiandae eius id. Qui magni voluptas quidem ipsum dolor.\n\nAdipisci cupiditate officia consequatur ad. Est perferendis est cumque et tempore nihil maiores. Dolorem voluptatem rem amet fugit quod quia delectus ullam. Hic illo ut laudantium corrupti laborum assumenda.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/12"},"edit":{"href":"https://gorest.co.in/public-api/posts/12"}}},{"id":"13","user_id":"339","title":"Ullam eos itaque eaque. Est et necessitatibus quis aspernatur. Amet rerum et consequuntur aut.","body":"Sapiente voluptas fugiat natus et. Voluptatem sit mollitia laborum quis. Adipisci molestiae dolores quos consequatur. Est qui sequi hic est similique.\n\nEarum itaque blanditiis ex harum. Qui sed ut qui quia officia dolor. Officiis facilis ex eos optio perferendis.\n\nBeatae dolorem perspiciatis quo praesentium exercitationem quia. Voluptatibus ut et id dicta. Consectetur sapiente aut eos nesciunt.\n\nAnimi tempora vitae ut cupiditate. Quasi illum autem nemo in in ut. Qui molestiae recusandae odit a quas.\n\nItaque rerum similique qui enim et. Et et suscipit autem earum ut ipsa. Sit quo in reiciendis consequatur fuga velit illum facilis.\n\nQuia molestias aut eaque sit molestiae fugiat aut aliquam. Quasi aperiam qui magnam. Et nihil explicabo sequi laudantium harum. Illo perspiciatis dolor et occaecati maiores voluptatibus velit.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/13"},"edit":{"href":"https://gorest.co.in/public-api/posts/13"}}},{"id":"14","user_id":"1513","title":"Earum eaque eius cum ea corrupti. Rerum sit ut nemo ut. Officiis sed et corporis quas vel et animi.","body":"Reiciendis ad in modi dolores alias alias magnam. Iste qui est corrupti illum.\n\nPossimus hic maxime error aliquam rerum tempora. Perspiciatis recusandae alias ut esse nostrum. Ea molestiae velit doloribus saepe eligendi ea sit.\n\nCumque recusandae voluptas maiores sed. Illo asperiores temporibus eum architecto cum qui. Repellat nihil neque et quia ut quos.\n\nQui itaque voluptatibus porro nostrum quaerat sunt et totam. Consequatur et quia voluptas quae aut rem voluptas. Nulla atque iure nisi.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/14"},"edit":{"href":"https://gorest.co.in/public-api/posts/14"}}},{"id":"15","user_id":"1365","title":"Modi dolorem est non est nihil reiciendis et. Eos velit architecto est asperiores quia numquam.","body":"Similique ut dolorem in excepturi itaque. Quisquam quia voluptas est esse ullam. Cupiditate quaerat vel omnis hic assumenda neque culpa. In cumque dolorem rem magni.\n\nVoluptatem similique maiores tempore placeat possimus velit reiciendis minus. Id fugiat aut quia laborum ducimus. Dolor architecto nulla quos veritatis id esse et. Cupiditate deserunt ipsum sit.\n\nIn est voluptas sit et. Ipsum magni totam assumenda cupiditate. Consequatur aperiam libero quia sint. Incidunt dolores alias ut saepe minima.\n\nIste ut voluptate amet ut. Error consectetur quas doloremque incidunt qui ex temporibus. Molestiae qui officiis omnis quaerat eum natus eum. Quo ducimus vel omnis illum ipsa.\n\nEt molestiae quia ut dignissimos sequi. Id libero sapiente perspiciatis. Consequatur ipsam laboriosam a fugit reiciendis quia pariatur.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/15"},"edit":{"href":"https://gorest.co.in/public-api/posts/15"}}},{"id":"16","user_id":"1734","title":"Qui accusantium unde dolores. Voluptatem fugit incidunt aspernatur et. Tempore ipsa velit voluptas.","body":"Quo ad molestiae reiciendis quasi ut. Consequuntur facilis quam cumque cumque eum asperiores. Cupiditate voluptas quod accusamus repudiandae ducimus voluptas nobis. Excepturi nihil quis possimus eveniet dolores mollitia. Nulla vel eius commodi assumenda molestiae.\n\nEa omnis et ab magni nihil est. Temporibus modi consequuntur ut officiis omnis beatae consectetur minus. Ut error quia vel libero aut et. Natus fugiat ratione voluptas fugiat eveniet eos nesciunt et.\n\nCumque quod aliquid reprehenderit nostrum et est. Et consequatur qui odio repellendus accusamus. Et necessitatibus a vel aut. Ducimus quod officiis velit sed necessitatibus perspiciatis aut.\n\nTempora quia non non aliquam velit et perferendis. Porro omnis illo error consequatur consequuntur voluptas velit.\n\nEligendi accusantium temporibus laboriosam maiores officiis a tempore. Eum unde eum neque eos nulla. Quasi illum nesciunt deleniti ipsam illo perferendis eos.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/16"},"edit":{"href":"https://gorest.co.in/public-api/posts/16"}}},{"id":"17","user_id":"328","title":"Ducimus voluptas iusto iste omnis minima. Vitae qui aut saepe. Voluptatem quod unde aut non quia.","body":"Velit aliquid et illo. Corporis sit doloribus voluptatum sapiente. Commodi et dolores explicabo aliquid.\n\nDolore unde consequatur sequi facilis. Ipsam ut blanditiis et facere veniam. Consectetur repudiandae eos quae officia fugit suscipit.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/17"},"edit":{"href":"https://gorest.co.in/public-api/posts/17"}}},{"id":"18","user_id":"179","title":"Consequatur fuga accusantium maiores eaque. Est unde nam ut dolor labore et.","body":"Asperiores sit provident ut in. Dolorem ut temporibus assumenda tempora itaque alias illo. Quod sed eveniet excepturi unde numquam et dolore. Assumenda voluptatem pariatur adipisci perferendis ullam aut.\n\nSimilique aut eum sed minus. Ipsa quia culpa assumenda sit. Deserunt dolor impedit voluptatem voluptas.\n\nA doloremque necessitatibus non. Numquam aspernatur qui sit maxime quo voluptatum.\n\nVelit molestiae consequuntur aut ipsum molestias voluptatem ea nihil. Voluptas mollitia optio aut. Dolorum voluptatem iure et ducimus cupiditate itaque iusto.\n\nAut quia voluptatem quam explicabo molestiae sit eos. Qui accusamus qui sint ut impedit maiores quaerat. Vel ut saepe commodi aut. Occaecati tempore quibusdam sequi veritatis similique.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/18"},"edit":{"href":"https://gorest.co.in/public-api/posts/18"}}},{"id":"19","user_id":"912","title":"Ipsa distinctio et atque officiis harum perferendis tempore. Quasi similique ea placeat.","body":"Nihil ullam tempore provident perspiciatis voluptatum. Quos dolor non facilis quis. Consectetur commodi at debitis numquam deleniti. Occaecati ex illo eligendi esse.\n\nRerum suscipit alias molestias aperiam facilis dolorum in. Sint et aut pariatur eius. In sint dignissimos unde qui et harum facere. Ducimus quia occaecati blanditiis consequatur.\n\nNostrum repellendus et sunt tempore. Vitae nostrum iusto quo rem. Sed molestias dolores unde ex autem ea consequatur.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/19"},"edit":{"href":"https://gorest.co.in/public-api/posts/19"}}},{"id":"20","user_id":"1500","title":"Ut vero alias eius autem mollitia aut. Aperiam aut labore recusandae voluptatem neque quibusdam.","body":"Quia eos error cupiditate ex suscipit voluptatem. Id quas veritatis asperiores asperiores voluptates similique. Quam aut et maiores facilis voluptates modi.\n\nAspernatur provident fugiat repudiandae dolores sit aliquid. Sapiente a quasi maiores explicabo ab. Id harum labore autem recusandae nobis enim.\n\nAt illo voluptatem culpa et perspiciatis ab dolore nisi. Et laborum omnis suscipit.\n\nConsequatur ex ipsam dolores nihil quia. Similique id molestiae tenetur cumque dolore ullam harum.\n\nDolores voluptatem quo quo delectus ut. Voluptatum totam doloribus quaerat quia. Rem et qui ut.\n\nNemo id dolores consequuntur quibusdam et. Assumenda ab sit aperiam. Provident recusandae molestiae tempore.","_links":{"self":{"href":"https://gorest.co.in/public-api/posts/20"},"edit":{"href":"https://gorest.co.in/public-api/posts/20"}}}]}
+
+           </textarea></td>
+       </tr>
+       <tr>
+           <td> <label for="command">Command: </label></td>
+           <!--<td><input class="textField" type="text" value="/"  ></td>-->
+          <td>
+              <div class="ui-widget">
+                  <input id="command" class="textField" value="/result/[*]" >
+
+              </div>
+          </td>
+       </tr>
+       <tr>
+           <td>Plain output</td>
+           <td><textarea  id="plain_output"class="textField" rows="15" cols="500">
+
+           </textarea></td>
+       </tr>
+       <!--<tr>-->
+           <!--<td>Output</td>-->
+           <!--<td>  <button class="clickMe" id="clickMe" name ="clickMe" value="Add">Click Me</button> </td>-->
+       <!--</tr>-->
+       <tr>
+           <td>Output</td>
+           <td> <div  id="jsoneditor"></div></td>
+       </tr>
+   </table>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    <div class="w3-xlarge w3-padding-32">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+
+    var editor = new JSONEditor(document.getElementById('jsoneditor'));
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+</script>
+
+
+<script>
+
+    var reducedJSON ;
+    function initReducedJSON() {
+        reducedJSON =  new reducedjson.Reducer();
+    }
+    // setTimeout(function(){   reducedJSON = new ditch.parser();}, 2000);
+
+    $(document).ready(function(){
+
+        var array;
+
+        $("#command").autocomplete({source:array}).keypress(function (e, data, ui) {
+            runcommand();
+        });
+
+        function runcommand()
+        {
+            var json = $('#json_area').val();
+            var cmd = $('#command').val();
+
+            var output = reducedJSON.process(json,cmd);
+            var map =$.parseJSON(reducedJSON.getKeys(output,cmd));
+
+            array = map.keySet;
+            showJsonTree(output);
+            refreshOptions();
+        }
+
+        function refreshOptions()
+        {
+            $('#command').autocomplete("option", { source: array});
+        }
+
+        function showJsonTree(jsondata) {
+
+            $('#plain_output').val(jsondata);
+            editor.setText(jsondata);
+        }
+    });
+
+</script>
+
+
+</body>
+</html>

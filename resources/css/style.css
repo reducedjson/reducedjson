@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-Apr-2016, 09:39:39
+    Author     : AsgherS
+*/
+.link
+{
+    padding: 5px;
+    /*border-radius: 20px;*/
+    bottom: 20px;
+    height: 30px;
+    /*border: 1px solid rgb(116, 19, 19);*/    
+    font: 12pt sans-serif;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12pt;
+    line-height: normal;
+    font-size-adjust: none;
+    font-stretch: normal;
+    -x-system-font: none;
+    font-feature-settings: normal;
+    font-language-override: normal;
+    font-kerning: auto;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    color: blue;
+}
+.mainContainer{
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    alignment-adjust: central;
+}
+
+.addDeleteButton {  
+  color: blue;
+  font-style:inherit;
+  font-size:larger;
+}
+.jsonpath_container{
+    /*background-color: gold;*/
+    
+    width: 700px;
+}
+.waiting
+{
+    background-image: url('../img/clock.gif');
+    width: 65px;
+    height: 65px;
+}
+
+.logo
+{
+    background-image: url('../img/FujitsuFastLogo.png');
+    width: 142px;
+    height: 66px;
+}
+.refresh
+{
+    background-image: url('../img/icon-refresh-3.PNG');
+    width: 30px;
+    height: 31px;
+}
+.downarrow
+{
+    /*background-image: url('../img/downArrow.PNG');*/
+    background: url('../img/downArrow1.PNG') no-repeat;
+    /*background-size:contain;*/
+    width: 30px;
+    height: 40px;
+    /*background-size: 30px;*/
+}
+.nowaiting
+{
+    
+    width: 65px;
+    height: 65px;
+}
+.prompt {
+    background-color: orange;
+    color: #999;
+}
