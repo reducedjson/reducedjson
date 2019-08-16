@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>ReducedJSON</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -103,6 +103,16 @@
             <h5 class="w3-padding-32">It is very handy to use ReducedJSON in quickest and shortest matter of time like in minutes. One needs to have good knowledge of Array and Map data structure while understanding JSON data</h5>
             <p class="w3-text-grey">There are two important parameters will always be used in ReducedJSON library while calling it's <b>process(json,command)</b> function.</p>
             <p class="w3-text-grey">In process(<b>json</b>,command) function, <b>json</b> is a string of json data and nothing more than that. where as <b>command</b> is what all about to understand how ReducedJSON works</p>
+            <ul>
+                <li><span style="font-weight: bold;">Configurations</span></li>
+                <ul>
+                    <li>Download or clone the <a href="https://github.com/reducedjson/reducedjson"> ReducedJSON library</a></li>
+                    <li>Copy the jsoncommand folder into appropriate resouece location e.g inside a js directory of your web page project</li>
+                </ul>
+                <li><span style="font-weight: bold;">Run reducedJSON library functions to parse the JSON</span></li>
+                <li><span style="font-weight: bold;">ReducedJSON command build and design<br>
+                </span></li>
+            </ul>
         </div>
     </div>
 </div>
@@ -154,9 +164,11 @@
         <i class="fa fa-snapchat w3-hover-opacity"></i>
         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
         <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <a href="https://www.linkedin.com/in/syed-shahzad-asgher-b46b9b5">
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </a>
     </div>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <p>Powered by <a href="http://www.seantechsol.com" target="_blank">Seantech solutions</a></p>
 </footer>
 
 <script>
@@ -197,7 +209,7 @@
             var json = $('#json_area').val();
             var cmd = $('#command').val();
 
-            var output = reducedJSON.process(json,cmd);
+            var output = reducedJSON.reduce(json,cmd);
             var map =$.parseJSON(reducedJSON.getKeys(output,cmd));
 
             array = map.keySet;
